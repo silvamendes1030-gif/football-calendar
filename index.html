@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Football Calendar</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #07111f;
+      color: white;
+    }
+
+    header {
+      padding: 25px 20px;
+      background: #0d1b2a;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #9fb0c3;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      margin-bottom: 25px;
+    }
+
+    .tab {
+      border: none;
+      padding: 12px 18px;
+      border-radius: 20px;
+      background: #16283b;
+      color: white;
+      white-space: nowrap;
+    }
+
+    .tab.active {
+      background: #16a34a;
+    }
+
+    .section-title {
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .match {
+      background: #102235;
+      border-radius: 15px;
+      padding: 18px;
+      margin-bottom: 12px;
+    }
+
+    .competition {
+      color: #7f95aa;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .teams {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+
+    .team {
+      flex: 1;
+      font-weight: bold;
+    }
+
+    .score {
+      font-size: 22px;
+      font-weight: bold;
+      min-width: 70px;
+    }
+
+    .status {
+      margin-top: 12px;
+      color: #4ade80;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .refresh {
+      width: 100%;
+      border: none;
+      padding: 15px;
+      border-radius: 12px;
+      background: #16a34a;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    footer {
+      text-align: center;
+      color: #718096;
+      padding: 30px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>⚽ Football Calendar</h1>
+    <p>Calendário e resultados de futebol</p>
+  </header>
+
+  <main class="container">
+
+    <button class="refresh" onclick="atualizar()">
+      🔄 Atualizar jogos
+    </button>
+
+    <div class="tabs">
+      <button class="tab active">Hoje</button>
+      <button class="tab">Amanhã</button>
+      <button class="tab">Próximos jogos</button>
+      <button class="tab">Resultados</button>
+    </div>
+
+    <h2 class="section-title">Jogos de hoje</h2>
+
+    <div id="matches">
+
+      <div class="match">
+        <div class="competition">Premier League</div>
+
+        <div class="teams">
+          <div class="team">Manchester City</div>
+
+          <div class="score">
+            20:00
+          </div>
+
+          <div class="team">Liverpool</div>
+        </div>
+
+        <div class="status">
+          Agendado
+        </div>
+      </div>
+
+      <div class="match">
+        <div class="competition">La Liga</div>
+
+        <div class="teams">
+          <div class="team">Barcelona</div>
+
+          <div class="score">
+            18:30
+          </div>
+
+          <div class="team">Real Madrid</div>
+        </div>
+
+        <div class="status">
+          Agendado
+        </div>
+      </div>
+
+      <div class="match">
+        <div class="competition">Serie A</div>
+
+        <div class="teams">
+          <div class="team">Inter</div>
+
+          <div class="score">
+            21:00
+          </div>
+
+          <div class="team">Milan</div>
+        </div>
+
+        <div class="status">
+          Agendado
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    Football Calendar • Dados reais serão conectados à API
+  </footer>
+
+  <script>
+    function atualizar() {
+      alert("Atualização solicitada!");
+    }
+  </script>
+
+</body>
+</html>
